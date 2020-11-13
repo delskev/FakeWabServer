@@ -31,9 +31,15 @@ files in the resources folder. The .json need to have the following structure to
     "name": "endpoint name",
     "description": "what it does (just for doc.)",
     "path": "/path/to/resource",
-    "method": "GET", //(GET, POST, PUT, DELETE, etc... )
-    "code": 200, // HTTP return code
-    "response": "Response body (can be a json object)"
+    "queryParam": {
+        "name": "fooo"
+    },
+    "method": "GET", 
+    "code": 200,
+    "response": {
+        "unfiltered": "Hello unknown",
+        "filtered": "Hello fooo"
+    }
 }
 ```
 
@@ -47,5 +53,5 @@ and the server will start on localhost:8080
 
 ## Usage <a name = "usage"></a>
 
-After the server started, you just go on http://localhost:<PORT>/<PATH>
+After the server started, you just go on http://localhost:3000/<PATH>
 to get the answer from you mock endpoint
