@@ -1,0 +1,14 @@
+{
+    "name": "Hello",
+    "description": "say hello",
+    "path": "/public/hello",
+    "queryParam": {
+        "name": "fooo"
+    },
+    "method": "GET",
+    "code": 200,
+    "response": {
+        "unfiltered": "Hello unknown",
+        "filtered": "Hello fooo"
+    }
+}
